@@ -10,16 +10,18 @@ public class Matrice{
         System.out.print("Inserisci numero di colonne: ");
         int nColonne = sc.nextInt();        //prende in input il numero di colonne
         int matrix[][] = new int[nRighe][nColonne];
-        for(int i = 0; i < nColonne; i++){
-            for(int j = 0; j < nRighe; j++){        //scorro righe e colonne e metto nelle varie posizioni i valori della matrice
+        for(int i = 0; i < nRighe; i++){
+            for(int j = 0; j < nColonne; j++){        //scorro righe e colonne e metto nelle varie posizioni i valori della matrice
+                System.out.print("Inserisci elemento a riga:"+(i+1)+" e colonna: "+(j+1)+" >>");
                 matrix[i][j] = sc.nextInt();
+                
                 
             }
 
         }
-        for(int i = 0; i < nColonne; i++){
+        for(int i = 0; i < nRighe; i++){
             String s = "";
-            for(int j = 0; j < nRighe; j++){
+            for(int j = 0; j < nColonne; j++){
                 
                 s = s + " "+ matrix[i][j];
                 
